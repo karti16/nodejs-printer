@@ -1,0 +1,23 @@
+{
+  "name": "my-electron-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": ".\\node_modules\\.bin\\electron-rebuild . && electron .",
+    "build": "electron-packager . electron-tutorial-app --overwrite --asar=true --platform=win32 --arch=x64 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Electron Tutorial App\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@thealexbaron/node-printer": "https://github.com/thealexbaron/node-printer.git",
+    "nan": "git+https://github.com/weedz/nan.git"
+  },
+  "devDependencies": {
+    "electron-packager": "^17.1.1",
+    "electron-builder": "^23.6.0",
+    "electron-rebuild": "3.2.7",
+    "electron": "^22.0.0"
+  }
+}
